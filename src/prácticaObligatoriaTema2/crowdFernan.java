@@ -52,10 +52,10 @@ public class crowdFernan {
                     if (numIntentos<0){
                         usuarioGestorBloqueado=true;
                         System.out.println("Estas bloqueado Gestor. Habla con el Admin \u274C");
+
                     }
                 }
-                System.out.println("Bienvenido Gestor!");
-                break;
+
             }else if ( usuarioIntroducido.equals(usuarioInversor)){
                 usuarioInversorActivo=true;
                 if (contraseniaIntroducida.equals(contraInversor)){
