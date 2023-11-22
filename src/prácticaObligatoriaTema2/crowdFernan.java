@@ -106,10 +106,14 @@ public class crowdFernan {
     }
 
     public static void menuUsuarioGestor(){
+
         System.out.println("Menu del usuario gestor");
     }
 
     public static void menuUsuarioInversor(){
+        int saldoInversor=0;
+        int añadirSaldo=0;
+        Scanner sc = new Scanner(System.in);
         System.out.println("***Menu del usuario inversor***");
         System.out.println("Seleccione una opción:");
         System.out.println("1.Panel de Control");
@@ -117,16 +121,157 @@ public class crowdFernan {
         System.out.println("3.Proyectos");
         System.out.println("4.Cartera Digital");
         System.out.println("5.Configuración");
+        int opcion = sc.nextInt();
+        switch (opcion){
+            case 1:
+                System.out.println("Estas dentro del panel de control");
+                System.out.println("Resumen de inversiones realizadas, seleccione entre prestamo, plusvalia o alquiler");
+                String tipoInversion = sc.next();
+                switch (tipoInversion){
+                    case "prestamo":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (prestamo)");
+                        break;
+                    case "plusvalia":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (plusvalia)");
+                        break;
+                    case "alquiler":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (alquiler)");
+                        break;
+                }
+                break;
+            case 2:
+                System.out.println("Pestaña Mis Inversiones:");
+                break;
+
+            case 3:
+                System.out.println("Pestaña Proyectos:");
+                break;
+
+            case 4:
+                System.out.println("***Cartera Digital***");
+                System.out.println("Tu saldo es: "+saldoInversor+"€");
+                System.out.println("¿Deseas añadir más fondos a tu cartera digital?(s/n)");
+                String masDinero = sc.next();
+                switch (masDinero){
+                    case "s":
+                        System.out.println("Dime la cantidad que quieres añadir");
+                        añadirSaldo=sc.nextInt();
+                        saldoInversor+=añadirSaldo;
+                        System.out.println("Tu saldo ahora es: "+saldoInversor+"€");
+                        break;
+
+                    case "n":
+                        System.out.println("No quieres añadir más fondos, vale.");
+                        break;
+                }
+                break;
+            case 5:
+                int opcionConfiguracion =0;
+
+                    System.out.println("***CONFIGURACIÓN***");
+                    System.out.println("1.-Cambiar contraseña");
+                    System.out.println("2.-Cambiar usuario");
+                    System.out.println("3.-Terminar");
+                     opcionConfiguracion = sc.nextInt();
+                    switch (opcionConfiguracion){
+                        case 1:
+                            System.out.println("Opción para cambiar contraseña");
+                            break;
+
+                        case 2:
+                            System.out.println("Opción para cambiar de usuario");
+                            break;
+
+                        case 3:
+                            System.out.println("Volviendo atras...");
+                            break;
+                    }
+
+                break;
+        }
+
+
     }
 
     public static void menuUsuarioInversor2(){
-        System.out.println("***Menu del usuario inversor2***");
+        int saldoInversor=0;
+        int añadirSaldo=0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("***Menu del usuario inversor***");
         System.out.println("Seleccione una opción:");
         System.out.println("1.Panel de Control");
         System.out.println("2.Mis inversiones");
         System.out.println("3.Proyectos");
         System.out.println("4.Cartera Digital");
         System.out.println("5.Configuración");
+        int opcion = sc.nextInt();
+        switch (opcion){
+            case 1:
+                System.out.println("Estas dentro del panel de control");
+                System.out.println("Resumen de inversiones realizadas, seleccione entre prestamo, plusvalia o alquiler");
+                String tipoInversion = sc.next();
+                switch (tipoInversion){
+                    case "prestamo":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (prestamo)");
+                        break;
+                    case "plusvalia":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (plusvalia)");
+                        break;
+                    case "alquiler":
+                        System.out.println("(Resumen de inversiones agrupadas por el tipo de proyecto (alquiler)");
+                        break;
+                }
+                break;
+            case 2:
+                System.out.println("Pestaña Mis Inversiones:");
+                break;
+
+            case 3:
+                System.out.println("Pestaña Proyectos:");
+                break;
+
+            case 4:
+                System.out.println("***Cartera Digital***");
+                System.out.println("Tu saldo es: "+saldoInversor+"€");
+                System.out.println("¿Deseas añadir más fondos a tu cartera digital?(s/n)");
+                String masDinero = sc.next();
+                switch (masDinero){
+                    case "s":
+                        System.out.println("Dime la cantidad que quieres añadir");
+                        añadirSaldo=sc.nextInt();
+                        saldoInversor+=añadirSaldo;
+                        System.out.println("Tu saldo ahora es: "+saldoInversor+"€");
+                        break;
+
+                    case "n":
+                        System.out.println("No quieres añadir más fondos, vale.");
+                        break;
+                }
+                break;
+            case 5:
+                int opcionConfiguracion =0;
+
+                System.out.println("***CONFIGURACIÓN***");
+                System.out.println("1.-Cambiar contraseña");
+                System.out.println("2.-Cambiar usuario");
+                System.out.println("3.-Terminar");
+                opcionConfiguracion = sc.nextInt();
+                switch (opcionConfiguracion){
+                    case 1:
+                        System.out.println("Opción para cambiar contraseña");
+                        break;
+
+                    case 2:
+                        System.out.println("Opción para cambiar de usuario");
+                        break;
+
+                    case 3:
+                        System.out.println("Terminando");
+                        break;
+                }
+
+                break;
+        }
     }
 
     public static void main(String[] args) {
