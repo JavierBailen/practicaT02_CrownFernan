@@ -102,7 +102,73 @@ public class crowdFernan {
 
 
     public static void menuUsuarioAdmin(){
-        System.out.println("****Menú del usuario administrador**** \uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDCBB");
+        Scanner sc = new Scanner(System.in);
+        while (true){
+            System.out.println("****Menú del usuario administrador**** \uD83D\uDC68\uD83C\uDFFE\u200D\uD83D\uDCBB");
+            System.out.println("1.-Panel de control");
+            System.out.println("2.-Proyectos");
+            System.out.println("3.-Configuración");
+            System.out.println("4.-Salir");
+            int opcionMenu = sc.nextInt();
+
+            switch (opcionMenu){
+                case 1:
+                    System.out.println("Estas dentro del panel de control");
+                    System.out.println("1.-Bloquear usuario");
+                    System.out.println("2.-Desbloquear usuario");
+                    System.out.println("3.-Volver atras");
+                    int opcionPanelControl = sc.nextInt();
+
+                    switch (opcionPanelControl){
+                        case 1:
+                            System.out.println("Opción para bloquear usuarios:");
+                            break;
+                        case 2:
+                            System.out.println("Opción para desbloquear usuarios:");
+                            break;
+                        case 3:
+                            System.out.println("Volviendo atras...");
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("Estas dentro de la pestaña Proyectos, mostrando listado...");
+                    break;
+
+                case 3:
+                    int opcionConfiguracion =0;
+                    while (true){
+                        System.out.println("Estas dentro de la pestaña configuración");
+                        System.out.println("1.-Cambiar contraseña");
+                        System.out.println("2.-Cambiar usuario");
+                        System.out.println("3.-Volver atrás");
+                        opcionConfiguracion=sc.nextInt();
+
+                        switch (opcionConfiguracion){
+                            case 1:
+                                System.out.println("Opciones para cambio de contraseña");
+                                break;
+                            case 2:
+                                System.out.println("Opciones para cambio de usuario");
+                                break;
+                            case 3:
+                                System.out.println("Volviendo atrás...");
+                                break;
+
+                        }
+                        break;
+                    }
+                    break;
+                case 4:
+                    System.out.println("Terminando uso de la aplicación...");
+                    return;
+
+
+
+            }
+        }
+
     }
 
     public static void menuUsuarioGestor(){
