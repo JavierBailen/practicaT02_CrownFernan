@@ -6,6 +6,8 @@ public class crowdFernan {
 
 
 
+
+
     public static void sistemaAcceso(){
         int numIntentos = 2;
         String contraAdmin = "admin";
@@ -101,6 +103,8 @@ public class crowdFernan {
     }
 
 
+
+
     public static void menuUsuarioAdmin(){
         Scanner sc = new Scanner(System.in);
         while (true){
@@ -172,8 +176,73 @@ public class crowdFernan {
     }
 
     public static void menuUsuarioGestor(){
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Menu del usuario gestor");
+        while (true){
+            System.out.println("Menu del usuario gestor");
+            System.out.println("1.-Panel de control");
+            System.out.println("2.-Mis proyectos");
+            System.out.println("3.-Configuración");
+            System.out.println("4.-Salir");
+            int opcionMenu = sc.nextInt();
+
+            switch (opcionMenu){
+                case 1:
+                    System.out.println("Estás dentro del panel de control");
+                    System.out.println("Resumen de proyectos creados, selecciona tipo: prestamo, plusvalia, alquiler");
+                    String tipoProyecto = sc.next();
+                    switch (tipoProyecto){
+                        case "prestamo":
+                            System.out.println("(Resumen de proyectos creados (prestamo)");
+                            break;
+                        case "plusvalia":
+                            System.out.println("Resumen de proyectos creados (plusvalia)");
+                            break;
+                        case "alquiler":
+                            System.out.println("Resumen de proyectos creados (alquiler)");
+                            break;
+                    }
+                    break;
+
+                case 2:
+                    System.out.println("Pestaña Mis Proyectos:");
+                    System.out.println("Todavia no hay proyectos");
+                    break;
+
+                case 3:
+                    int opcionConfiguracion = 0;
+
+                    while (true){
+                        System.out.println("Pestaña Configuración:");
+                        System.out.println("1.-Cambiar contraseña:");
+                        System.out.println("2.-Cambiar nombre de usuario: ");
+                        System.out.println("3.-Volver");
+                        opcionConfiguracion = sc.nextInt();
+
+                        switch (opcionConfiguracion){
+                            case 1:
+                                System.out.println("Opción para cambio de contraseña");
+                                break;
+                            case 2:
+                                System.out.println("Opción para cambio de usuario:");
+                                break;
+                            case 3:
+                                System.out.println("Volviendo...");
+                                break;
+                        }
+                        break;
+
+
+
+                    }
+                    break;
+                case 4:
+                    System.out.println("Terminando uso de la aplicación...");
+                    return;
+
+            }
+        }
+
     }
 
     public static void menuUsuarioInversor(){
