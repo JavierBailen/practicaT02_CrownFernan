@@ -1,4 +1,5 @@
 En esta práctica hemos realizado un sistema de acceso a distintos tipos de usuarios:
+
 ![img_1.png](img_1.png)
 
 Tenemos que ingresar los datos correctos y nos mostrará dependiento del usuario disntintos menús, los usuarios son: admin, gestor y inversor.
