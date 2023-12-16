@@ -122,7 +122,7 @@ public class crowdFernan {
                     System.out.println("2.-Desbloquear usuario");
                     System.out.println("3.-Volver atras");
                     int opcionPanelControl = sc.nextInt();
-
+                    //submenú
                     switch (opcionPanelControl){
                         case 1:
                             System.out.println("Opción para bloquear usuarios:");
@@ -174,6 +174,8 @@ public class crowdFernan {
         }
 
     }
+
+    
 
     public static void menuUsuarioGestor(){
         Scanner sc = new Scanner(System.in);
@@ -434,7 +436,7 @@ public class crowdFernan {
                 case 6:
                     System.out.println("Terminando uso de la aplicación...");
                     return; //aqui se utiliza return para terminar con el bucle
-                //con return salimos del método menuUsuarioInversor
+                            //con return salimos del método menuUsuarioInversor
 
 
             }
